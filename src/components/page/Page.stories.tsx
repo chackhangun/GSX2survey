@@ -29,6 +29,6 @@ export const Defulat: Story = {
   args: {
     headerText: "테스트 페이지",
     buttonText: "테스트 버튼",
-    content: <div>테스트 페이지입니다.</div>,
+    children: <div>테스트 페이지입니다.</div>,
   },
 };

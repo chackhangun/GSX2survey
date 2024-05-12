@@ -3,7 +3,7 @@ import { PrimaryButton } from "../primary-button";
 
 export function Page(props: {
   headerText: string;
-  content: React.ReactNode;
+  children: React.ReactNode;
   buttonText: string;
   onClickHeaderBackIcon: () => void;
   onClickPrimaryButton: () => void;
@@ -11,7 +11,7 @@ export function Page(props: {
   const {
     headerText,
     buttonText,
-    content,
+    children,
     onClickHeaderBackIcon,
     onClickPrimaryButton,
   } = props;
@@ -20,7 +20,9 @@ export function Page(props: {
       <Header hasBackIcon onClickBackIcon={onClickHeaderBackIcon}>
         {headerText}
       </Header>
-      <div className="flex-1 w-full h-full overflow-scroll">{content}</div>
+      <div className="flex-1 w-full h-full overflow-scroll flex flex-col">
+        {children}
+      </div>
       <PrimaryButton onClick={onClickPrimaryButton}>{buttonText}</PrimaryButton>
     </div>
   );
