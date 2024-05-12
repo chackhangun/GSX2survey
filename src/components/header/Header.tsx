@@ -10,7 +10,7 @@ export function Header(props: {
     <div className="relative w-full h-11 flex justify-center items-center px-4">
       {hasBackIcon && (
         <div
-          className="absolute left-4 w-6 h-6 flex justify-center items-center"
+          className="absolute left-0 w-6 h-6 flex justify-center items-center cursor-pointer"
           onClick={onClickBackIcon}
         >
           <FaChevronLeft />
